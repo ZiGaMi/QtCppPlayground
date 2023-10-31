@@ -29,6 +29,9 @@
 #include <QList>
 #include <QString>
 
+#include <QSerialPort>
+#include <QSerialPortInfo>
+
 ////////////////////////////////////////////////////////////////////////////////
 // Definitions
 ////////////////////////////////////////////////////////////////////////////////
@@ -47,6 +50,12 @@ typedef struct
 } serial_info_t;
 
 
+typedef enum
+{
+    eSERIAL_OK      = 0,
+    eSERIAL_ERROR,
+} serial_status_t;
+
 
 /**
  *  Template Class
@@ -60,8 +69,15 @@ class SerialPort
         SerialPort(const serial_cfg_t * const p_cfg);
         ~SerialPort(void);
 
-        void show_ports(void);
 
+        serial_status_t serial_open     (const QSerialPortInfo & comPortInfo);
+        serial_status_t serial_transmit (const uint8_t * const p_data, const uint32_t size);
+        serial_status_t serial_receive  (uint8_t * const p_data);
+
+
+
+
+        void show_ports(void);
         static const QList<serial_info_t> serial_ports_info(void);
 
 
@@ -80,7 +96,7 @@ class SerialPort
         ////////////////////////////////////////////////////////////////////////////////
         //  Private Variables
         ////////////////////////////////////////////////////////////////////////////////
-
+        QSerialPort m_comPort;
 
 };
 

@@ -74,6 +74,9 @@
 SerialPort::SerialPort(const serial_cfg_t * const p_cfg)
 {
     qInfo() << "Serial Port created";
+
+
+    QSerialPort m_comPort = QSerialPort();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -86,8 +89,54 @@ SerialPort::SerialPort(const serial_cfg_t * const p_cfg)
 SerialPort::~SerialPort(void)
 {
     qInfo() << "Serial Port desctructed";
+
+    m_comPort.close();
 }
 
+serial_status_t SerialPort::serial_open(const QSerialPortInfo &comPortInfo)
+{
+    serial_status_t status = eSERIAL_OK;
+
+    // Setup port informations
+    m_comPort.setPort( comPortInfo );
+
+
+
+    // Open COM port
+    if ( true != m_comPort.open( QIODeviceBase::ReadWrite ))
+    {
+        status = eSERIAL_ERROR;
+    }
+
+    return status;
+}
+
+serial_status_t SerialPort::serial_transmit(const uint8_t * const p_data, const uint32_t size)
+{
+    serial_status_t status = eSERIAL_OK;
+
+    m_comPort.write((const char*) p_data, size );
+    //m_comPort.write((const char*) p_data,  );
+
+    return status;
+}
+
+serial_status_t SerialPort::serial_receive(uint8_t * const p_data)
+{
+    serial_status_t status = eSERIAL_OK;
+
+
+
+    return status;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/*!
+* @brief    	Show all available ports
+*
+* @return       void
+*/
+////////////////////////////////////////////////////////////////////////////////
 void SerialPort::show_ports()
 {
     const QList<QSerialPortInfo> serialPortInfos = QSerialPortInfo::availablePorts();
@@ -103,15 +152,22 @@ void SerialPort::show_ports()
     qInfo() << "-------------------------------------------------------------";
 }
 
+////////////////////////////////////////////////////////////////////////////////
+/*!
+* @brief    	Get COM port informations
+*
+* @return       info - List of port informations
+*/
+////////////////////////////////////////////////////////////////////////////////
 const QList<serial_info_t> SerialPort::serial_ports_info()
 {
     QList<serial_info_t> info;
 
-    const QList<QSerialPortInfo> serialPortInfos = QSerialPortInfo::availablePorts();
+    //const QList<QSerialPortInfo> serialPortInfos = QSerialPortInfo::availablePorts();
 
-    for ( const QSerialPortInfo &portInfo : serialPortInfos )
+    //for ( const QSerialPortInfo &portInfo : serialPortInfos )
+    for ( const QSerialPortInfo &portInfo : QSerialPortInfo::availablePorts())
     {
-
         // Create serial info
         const serial_info_t ser_info =
         {
@@ -123,9 +179,8 @@ const QList<serial_info_t> SerialPort::serial_ports_info()
         info.append( ser_info );
     }
 
-    return info;
+    return (const QList<serial_info_t>) info;
 }
-
 
 ////////////////////////////////////////////////////////////////////////////////
 /**
