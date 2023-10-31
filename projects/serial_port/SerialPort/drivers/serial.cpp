@@ -99,11 +99,12 @@ serial_status_t SerialPort::serial_open(const QSerialPortInfo &comPortInfo)
 
     // Setup port informations
     m_comPort.setPort( comPortInfo );
-
+    m_comPort.setBaudRate( QSerialPort::Baud115200, QSerialPort::Direction::AllDirections );
+    m_comPort.setParity( QSerialPort::NoParity );
 
 
     // Open COM port
-    if ( true != m_comPort.open( QIODeviceBase::ReadWrite ))
+    if ( true != m_comPort.open( QIODevice::ReadWrite ))
     {
         status = eSERIAL_ERROR;
     }
@@ -116,7 +117,12 @@ serial_status_t SerialPort::serial_transmit(const uint8_t * const p_data, const 
     serial_status_t status = eSERIAL_OK;
 
     m_comPort.write((const char*) p_data, size );
+
+    m_comPort.waitForBytesWritten( 1000 );
+
     //m_comPort.write((const char*) p_data,  );
+
+    //m_comPort.flush();
 
     return status;
 }

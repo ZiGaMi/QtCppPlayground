@@ -4,6 +4,7 @@
 #include <QList>
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include <QThread>
 
 #include "drivers/serial.h"
 
@@ -48,6 +49,10 @@ int main(int argc, char *argv[])
     while  ( 1 )
     {
         myComPort.serial_transmit((const uint8_t*) "Hello world", 5 );
+
+        qInfo() << "Sending to COM port...";
+
+        QThread::msleep(250);
     }
 
     return a.exec();
