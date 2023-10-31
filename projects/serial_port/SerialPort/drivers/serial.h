@@ -26,6 +26,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 #include <stdint.h>
 
+#include <QList>
+#include <QString>
 
 ////////////////////////////////////////////////////////////////////////////////
 // Definitions
@@ -37,6 +39,12 @@ typedef struct
     uint32_t com_port;
     uint8_t baud;
 } serial_cfg_t;
+
+typedef struct
+{
+    QString name;    /**<COM Name */
+    QString desc;    /**<COM Describtion */
+} serial_info_t;
 
 
 
@@ -53,6 +61,10 @@ class SerialPort
         ~SerialPort(void);
 
         void show_ports(void);
+
+        static const QList<serial_info_t> serial_ports_info(void);
+
+
 
 
     ////////////////////////////////////////////////////////////////////////////////

@@ -90,25 +90,40 @@ SerialPort::~SerialPort(void)
 
 void SerialPort::show_ports()
 {
-    const auto serialPortInfos = QSerialPortInfo::availablePorts();
+    const QList<QSerialPortInfo> serialPortInfos = QSerialPortInfo::availablePorts();
 
-    for (const QSerialPortInfo &portInfo : serialPortInfos) {
-        qDebug() << "\n"
-                 << "Port:" << portInfo.portName() << "\n"
-                 << "Location:" << portInfo.systemLocation() << "\n"
-                 << "Description:" << portInfo.description() << "\n"
-                 << "Manufacturer:" << portInfo.manufacturer() << "\n"
-                 << "Serial number:" << portInfo.serialNumber() << "\n"
-                 << "Vendor Identifier:"
-                 << (portInfo.hasVendorIdentifier()
-                         ? QByteArray::number(portInfo.vendorIdentifier(), 16)
-                         : QByteArray()) << "\n"
-                 << "Product Identifier:"
-                 << (portInfo.hasProductIdentifier()
-                         ? QByteArray::number(portInfo.productIdentifier(), 16)
-                         : QByteArray());
+    qInfo() << "Founded" << QString::number( serialPortInfos.size() ) << "COM ports!";
+    qInfo() << "-------------------------------------------------------------";
+
+    for ( const QSerialPortInfo &portInfo : serialPortInfos )
+    {
+        qInfo() << "Port: " << portInfo.portName();
     }
 
+    qInfo() << "-------------------------------------------------------------";
+}
+
+const QList<serial_info_t> SerialPort::serial_ports_info()
+{
+    QList<serial_info_t> info;
+
+    const QList<QSerialPortInfo> serialPortInfos = QSerialPortInfo::availablePorts();
+
+    for ( const QSerialPortInfo &portInfo : serialPortInfos )
+    {
+
+        // Create serial info
+        const serial_info_t ser_info =
+        {
+            .name = portInfo.portName(),
+            .desc = portInfo.description(),
+        };
+
+        // Add to information list
+        info.append( ser_info );
+    }
+
+    return info;
 }
 
 
