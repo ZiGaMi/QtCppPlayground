@@ -18,8 +18,9 @@ int main()
             .override   = true,
         };
 
+        typedef RingBuffer<uint8_t> FloatBuffer;
 
-        RingBuffer<uint8_t> fifo( 4, &attr );
+        FloatBuffer fifo( 4, &attr );
 
 
 
@@ -29,8 +30,15 @@ int main()
         fifo.add( 2 );
 
 
+
+
         uint8_t data;
-        fifo.get( &data );
+        if ( FloatBuffer::Ok == fifo.get( &data ))
+        {
+            (void) FloatBuffer::WarningEmpty;
+        }
+
+
         std::cout << "Get: " << data << std::endl;
 
         fifo.get( &data );

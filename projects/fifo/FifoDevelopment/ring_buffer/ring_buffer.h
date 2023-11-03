@@ -44,12 +44,6 @@ typedef struct
     bool         override;  /**<Override buffer content when full. Default: false */
 } ring_buffer_attr_t;
 
-typedef enum
-{
-    Ok,
-    Error,
-} Status;
-
 /**
  *  Ring Buffer Class
  */
@@ -63,8 +57,7 @@ class RingBuffer
         RingBuffer(const uint32_t size, const ring_buffer_attr_t * const attr);
         ~RingBuffer();
 
-#if 0
-        enum status_t
+        enum Status
         {
             Ok              = 0x00U,    /**<Normal operation */
 
@@ -77,10 +70,8 @@ class RingBuffer
             WarningFull     = 0x10U,    /**<Buffer full warning */
             WarningEmpty    = 0x20U,    /**<Buffer empty warning */
         };
-#endif
 
-
-        Status add(const T item);
+        uint8_t add(const T item);
         Status get(const T* p_item);
 
 

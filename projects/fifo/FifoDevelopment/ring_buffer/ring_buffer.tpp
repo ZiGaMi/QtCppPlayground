@@ -130,9 +130,9 @@ RingBuffer<T>::~RingBuffer()
 }
 
 template<typename T>
-Status RingBuffer<T>::add(const T item)
+uint8_t RingBuffer<T>::add(const T item)
 {
-    Status status = Ok;
+    uint8_t status = Ok;
 
     std::cout << "Adding..." << std::endl;
 
@@ -140,9 +140,9 @@ Status RingBuffer<T>::add(const T item)
 }
 
 template<typename T>
-Status RingBuffer<T>::get(const T *p_item)
+typename RingBuffer<T>::Status RingBuffer<T>::get(const T *p_item)
 {
-    Status status = Ok;
+    RingBuffer<T>::Status status = RingBuffer::Ok;
 
     std::cout << "Getting..." << std::endl;
 
