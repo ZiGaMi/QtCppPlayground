@@ -19,15 +19,23 @@ int main()
         };
 
         typedef RingBuffer<uint8_t> FloatBuffer;
+        typedef RingBuffer<uint8_t>::Status U8BufferStatus;
 
         FloatBuffer fifo( 4, &attr );
 
 
 
 
-        fifo.add( 0 );
-        fifo.add( 1 );
-        fifo.add( 2 );
+        U8BufferStatus status = U8BufferStatus::Ok;
+
+        if ( U8BufferStatus::Ok == fifo.add( 0 ))
+        {
+            std::cout << "Added to fifo OK..." << std::endl;
+        }
+
+
+        status = fifo.add( 1 );
+        status = fifo.add( 2 );
 
 
 

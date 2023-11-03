@@ -71,7 +71,7 @@ class RingBuffer
             WarningEmpty    = 0x20U,    /**<Buffer empty warning */
         };
 
-        uint8_t add(const T item);
+        Status add(const T item);
         Status get(const T* p_item);
 
 
