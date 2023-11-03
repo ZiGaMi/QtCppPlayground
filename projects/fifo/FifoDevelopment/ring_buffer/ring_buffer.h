@@ -33,14 +33,6 @@
 // Definitions
 ////////////////////////////////////////////////////////////////////////////////
 
-/**
- *  Status
- */
-typedef enum
-{
-    eRING_BUFFER_OK = 0,    /**<Normal operation */
-    eRING_BUFFER_ERROR,     /**<General error code */
-} ring_buffer_status_t;
 
 /**
  *  Ring Buffer attributes
@@ -51,6 +43,12 @@ typedef struct
     void *       p_mem;     /**<Used buffer memory for static allocation, NULL for dynamic allocation. Default: NULL */
     bool         override;  /**<Override buffer content when full. Default: false */
 } ring_buffer_attr_t;
+
+typedef enum
+{
+    Ok,
+    Error,
+} Status;
 
 /**
  *  Ring Buffer Class
@@ -65,8 +63,25 @@ class RingBuffer
         RingBuffer(const uint32_t size, const ring_buffer_attr_t * const attr);
         ~RingBuffer();
 
-        ring_buffer_status_t add(const T item);
-        ring_buffer_status_t get(const T* p_item);
+#if 0
+        enum status_t
+        {
+            Ok              = 0x00U,    /**<Normal operation */
+
+            /**<Error codes */
+            Error           = 0x01U,    /**<General error code */
+            ErrorMemory     = 0x02U,    /**<Memory allocation error */
+            ErrorArgs       = 0x04U,    /**<Invalid arguments */
+
+            /**<Warnings */
+            WarningFull     = 0x10U,    /**<Buffer full warning */
+            WarningEmpty    = 0x20U,    /**<Buffer empty warning */
+        };
+#endif
+
+
+        Status add(const T item);
+        Status get(const T* p_item);
 
 
 

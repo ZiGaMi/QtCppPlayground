@@ -106,6 +106,10 @@ RingBuffer<T>::RingBuffer(const uint32_t size, const ring_buffer_attr_t * const 
             p_data = (T*) attr->p_mem;
         }
     }
+    else
+    {
+        throw std::invalid_argument("Missing attr parameter");
+    }
 }
 
 
@@ -122,12 +126,13 @@ RingBuffer<T>::~RingBuffer()
 {
     std::cout << "RingBuffer destroyed..." << std::endl;
 
+    delete p_data;
 }
 
 template<typename T>
-ring_buffer_status_t RingBuffer<T>::add(const T item)
+Status RingBuffer<T>::add(const T item)
 {
-    ring_buffer_status_t status = eRING_BUFFER_OK;
+    Status status = Ok;
 
     std::cout << "Adding..." << std::endl;
 
@@ -135,9 +140,9 @@ ring_buffer_status_t RingBuffer<T>::add(const T item)
 }
 
 template<typename T>
-ring_buffer_status_t RingBuffer<T>::get(const T *p_item)
+Status RingBuffer<T>::get(const T *p_item)
 {
-    ring_buffer_status_t status = eRING_BUFFER_OK;
+    Status status = Ok;
 
     std::cout << "Getting..." << std::endl;
 

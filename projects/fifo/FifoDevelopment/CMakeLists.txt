@@ -5,6 +5,10 @@ project(FifoDevelopment LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Settings optimizations
+set(CMAKE_CXX_FLAGS_DEBUG "-Og")
+set(CMAKE_CXX_FLAGS_RELEASE "-O0")
+
 add_executable(FifoDevelopment
     main.cpp
     ring_buffer/ring_buffer.h

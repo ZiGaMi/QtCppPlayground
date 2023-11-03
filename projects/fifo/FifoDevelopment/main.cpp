@@ -19,16 +19,44 @@ int main()
         };
 
 
-        RingBuffer<float> fifo( 4, &attr );
-        //RingBuffer fifo;
+        RingBuffer<uint8_t> fifo( 4, &attr );
+
+
+
 
         fifo.add( 0 );
         fifo.add( 1 );
         fifo.add( 2 );
+
+
+        uint8_t data;
+        fifo.get( &data );
+        std::cout << "Get: " << data << std::endl;
+
+        fifo.get( &data );
+        std::cout << "Get: " << data << std::endl;
+
+        fifo.get( &data );
+        std::cout << "Get: " << data << std::endl;
+
+        fifo.get( &data );
+        std::cout << "Get: " << data << std::endl;
+
+
     }
 
+    std::cout << "Exiting application..." << std::endl;
 
-    std::cout << "Exiting application...";
+     RingBuffer<float> fifo2( 4, nullptr );
+
+    try
+    {
+        RingBuffer<float> fifo1( 4, nullptr );
+    }
+    catch (std::exception const& e)
+    {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
 
     return 0;
 }
