@@ -5,7 +5,10 @@ project(FifoDevelopment LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(FifoDevelopment main.cpp)
+add_executable(FifoDevelopment
+    main.cpp
+    ring_buffer/ring_buffer.h
+)
 
 include(GNUInstallDirs)
 install(TARGETS FifoDevelopment
