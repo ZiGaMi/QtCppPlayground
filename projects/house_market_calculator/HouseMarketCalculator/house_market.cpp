@@ -22,6 +22,20 @@ Widget::~Widget()
 
 void Widget::InputFormatter(const QString &new_text)
 {
+    // Get pointer to line edit object that triggers that function
+    QLineEdit * p_LineEdit = static_cast<QLineEdit*> ( this->sender() );
+
+    qInfo() << "New text: " << new_text << "Sends: " << p_LineEdit->objectName();
+
+    p_LineEdit->setText( "0000" );
+
+
+
+
+
+
+
+    /*
     QObject * p_obj = this->sender();
 
     QLineEdit * p_line_edit = (QLineEdit*) (p_obj);
@@ -32,6 +46,7 @@ void Widget::InputFormatter(const QString &new_text)
     qInfo() << "Parent: " << p_parent->objectName();
 
     p_line_edit->setText( "0000" );
+*/
 }
 
 
