@@ -9,9 +9,10 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
 
-
+    // Connection to formatter
     connect( ui->cena,      &QLineEdit::textChanged, this, &Widget::InputFormatter );
     connect( ui->velikost,  &QLineEdit::textChanged, this, &Widget::InputFormatter );
+    connect( ui->renta,     &QLineEdit::textChanged, this, &Widget::InputFormatter );
 
 }
 
@@ -25,28 +26,10 @@ void Widget::InputFormatter(const QString &new_text)
     // Get pointer to line edit object that triggers that function
     QLineEdit * p_LineEdit = static_cast<QLineEdit*> ( this->sender() );
 
-    qInfo() << "New text: " << new_text << "Sends: " << p_LineEdit->objectName();
+    // Debug line
+    qInfo() << "New text: " << new_text << "Sends: " << p_LineEdit->objectName() << "size()=" << QString::number( new_text.size() );
 
-    p_LineEdit->setText( "0000" );
-
-
-
-
-
-
-
-    /*
-    QObject * p_obj = this->sender();
-
-    QLineEdit * p_line_edit = (QLineEdit*) (p_obj);
-
-    qInfo() << "New text: " << new_text << "Sends: " << p_obj->objectName();
-
-    QObject * p_parent = p_obj->parent();
-    qInfo() << "Parent: " << p_parent->objectName();
-
-    p_line_edit->setText( "0000" );
-*/
+    // TODO: Make a formater...
 }
 
 

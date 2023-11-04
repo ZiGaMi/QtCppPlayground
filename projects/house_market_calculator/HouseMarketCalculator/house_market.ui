@@ -110,7 +110,7 @@
          </font>
         </property>
         <property name="inputMask">
-         <string>0000000</string>
+         <string/>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
