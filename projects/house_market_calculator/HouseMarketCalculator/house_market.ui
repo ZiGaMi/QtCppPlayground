@@ -6,1054 +6,1333 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1068</width>
-    <height>794</height>
+    <width>718</width>
+    <height>733</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_17">
+  <layout class="QHBoxLayout" name="horizontalLayout_11">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_16">
+    <layout class="QVBoxLayout" name="verticalLayout_21">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_15">
+        <layout class="QVBoxLayout" name="verticalLayout_20">
          <item>
-          <widget class="QLabel" name="title_label">
-           <property name="font">
-            <font>
-             <pointsize>20</pointsize>
-             <italic>true</italic>
-            </font>
-           </property>
-           <property name="text">
-            <string>Nepremičninski Investicijski Kalkulator</string>
-           </property>
-           <property name="margin">
-            <number>20</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_14">
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_13">
-             <property name="leftMargin">
-              <number>20</number>
-             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_19">
              <item>
-              <widget class="QLabel" name="label_12">
+              <widget class="QLabel" name="title_label">
                <property name="font">
                 <font>
-                 <pointsize>14</pointsize>
+                 <pointsize>20</pointsize>
                  <italic>true</italic>
-                 <bold>true</bold>
                 </font>
                </property>
                <property name="text">
-                <string>Osnovni podatki o nepremičnini</string>
+                <string>Nepremičninski Investicijski Kalkulator</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="margin">
+                <number>20</number>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="Line" name="line_4">
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="lineWidth">
-                <number>2</number>
-               </property>
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_5">
-               <property name="spacing">
-                <number>6</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>0</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>0</number>
-               </property>
+              <layout class="QVBoxLayout" name="verticalLayout_18">
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <layout class="QVBoxLayout" name="verticalLayout_12">
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <layout class="QVBoxLayout" name="verticalLayout_13">
+                   <property name="leftMargin">
+                    <number>20</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>20</number>
+                   </property>
                    <item>
-                    <widget class="QLabel" name="label">
+                    <widget class="QLabel" name="label_12">
                      <property name="font">
                       <font>
-                       <pointsize>12</pointsize>
+                       <pointsize>14</pointsize>
                        <italic>true</italic>
+                       <bold>true</bold>
                       </font>
                      </property>
                      <property name="text">
-                      <string>Cena nepremičnine [€]</string>
+                      <string>Osnovni podatki o nepremičnini</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_2">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <italic>true</italic>
-                      </font>
+                    <widget class="Line" name="line_4">
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="layoutDirection">
-                      <enum>Qt::LeftToRight</enum>
+                     <property name="lineWidth">
+                      <number>2</number>
                      </property>
-                     <property name="text">
-                      <string>Velikost [m^2]</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_3">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <italic>true</italic>
-                      </font>
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <property name="spacing">
+                      <number>6</number>
                      </property>
-                     <property name="layoutDirection">
-                      <enum>Qt::LeftToRight</enum>
+                     <property name="leftMargin">
+                      <number>0</number>
                      </property>
-                     <property name="text">
-                      <string>Mesečna najemnina [€]</string>
+                     <property name="topMargin">
+                      <number>0</number>
                      </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <property name="rightMargin">
+                      <number>0</number>
                      </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_19">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <italic>true</italic>
-                      </font>
+                     <property name="bottomMargin">
+                      <number>0</number>
                      </property>
-                     <property name="text">
-                      <string>Obdobje nenajemnosti [št. mesecev]</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_4">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_4">
+                         <item>
+                          <widget class="QLabel" name="label">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Cena nepremičnine [€]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_2">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="layoutDirection">
+                            <enum>Qt::LeftToRight</enum>
+                           </property>
+                           <property name="text">
+                            <string>Velikost [m^2]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_3">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="layoutDirection">
+                            <enum>Qt::LeftToRight</enum>
+                           </property>
+                           <property name="text">
+                            <string>Mesečna najemnina [€]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_19">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Obdobje nenajemnosti [št. mesecev]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_26">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Cena na velikost [€/m^2]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_3">
+                         <item>
+                          <widget class="QLineEdit" name="cena">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>82000</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite ceno...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="velikost">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>35</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite velikost...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="renta">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>400</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite rento...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="nenajemnost">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>2</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite ceno...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="cena_na_velikost">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>n/a</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout">
+                         <item>
+                          <widget class="QLabel" name="label_10">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="layoutDirection">
+                            <enum>Qt::LeftToRight</enum>
+                           </property>
+                           <property name="text">
+                            <string>Davek na dohodek [%]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_11">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="layoutDirection">
+                            <enum>Qt::LeftToRight</enum>
+                           </property>
+                           <property name="text">
+                            <string>Normiran dohodek [%]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_16">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Stroški obnove [%]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_18">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>NUSZ [€/leto]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_2">
+                         <item>
+                          <widget class="QLineEdit" name="davek_per">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>25.0</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="readOnly">
+                            <bool>false</bool>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite stopnjo davka...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="normiran_doh_per">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>10.0</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="readOnly">
+                            <bool>false</bool>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite normiran doh...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="obnova_per">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>7</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite ceno...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="stavbno">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>50</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite ceno...</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
                    <item>
-                    <widget class="QLineEdit" name="cena">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
+                    <layout class="QVBoxLayout" name="verticalLayout_11">
+                     <property name="leftMargin">
+                      <number>20</number>
                      </property>
-                     <property name="inputMask">
-                      <string/>
+                     <property name="topMargin">
+                      <number>20</number>
                      </property>
-                     <property name="text">
-                      <string>100000</string>
+                     <property name="rightMargin">
+                      <number>20</number>
                      </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                     <property name="bottomMargin">
+                      <number>20</number>
                      </property>
-                     <property name="placeholderText">
-                      <string>Vnesite ceno...</string>
-                     </property>
-                    </widget>
+                     <item>
+                      <widget class="QLabel" name="label_13">
+                       <property name="font">
+                        <font>
+                         <pointsize>14</pointsize>
+                         <italic>true</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Stroški nepremičnine</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="Line" name="line_3">
+                       <property name="frameShadow">
+                        <enum>QFrame::Plain</enum>
+                       </property>
+                       <property name="lineWidth">
+                        <number>2</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_3">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_7">
+                         <item>
+                          <widget class="QLabel" name="label_14">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Storitve upravnika [€]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_17">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Obratovalni stroški [€]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_15">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Zavarovanje [€]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_29">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                             <horstretch>2</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Obnova [€]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_30">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                             <horstretch>2</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Skupni stroški [€]</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_8">
+                         <item>
+                          <widget class="QLineEdit" name="storitve_upravnik">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>11.57</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite znesek...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="obratovalni_stroski">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="accessibleDescription">
+                            <string>test</string>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>28.21</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string extracomment="Tekoči mesečni stroški, položnice elektro, voda,...">Vnesite znesek...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="zavarovanje">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="inputMask">
+                            <string/>
+                           </property>
+                           <property name="text">
+                            <string>3.58</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                           <property name="placeholderText">
+                            <string>Vnesite znesek...</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="obnova">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>n/a</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="skupni_stroski">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>n/a</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_9">
+                         <item>
+                          <widget class="QLabel" name="sklad_leto">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>120 €/leto</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="poloznice_leto">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>120 €/leto</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="zavarovanje_leto">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>120 €/leto</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="poloznice_leto_3">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>/leto</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="poloznice_leto_4">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                             <italic>true</italic>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>/leto</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="velikost">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string>100</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Vnesite velikost...</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="renta">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string>200</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Vnesite rento...</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="nenajemnost">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string>2</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Vnesite ceno...</string>
-                     </property>
-                    </widget>
+                    <layout class="QVBoxLayout" name="verticalLayout_15">
+                     <item>
+                      <spacer name="horizontalSpacer_2">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </item>
                 </layout>
                </item>
                <item>
-                <spacer name="horizontalSpacer">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout">
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout">
+                  <layout class="QVBoxLayout" name="verticalLayout_10">
+                   <property name="leftMargin">
+                    <number>20</number>
+                   </property>
                    <item>
-                    <widget class="QLabel" name="label_10">
+                    <widget class="QLabel" name="label_20">
                      <property name="font">
                       <font>
-                       <pointsize>12</pointsize>
+                       <pointsize>14</pointsize>
                        <italic>true</italic>
+                       <bold>true</bold>
                       </font>
                      </property>
-                     <property name="layoutDirection">
-                      <enum>Qt::LeftToRight</enum>
-                     </property>
                      <property name="text">
-                      <string>Davek na dohodek [%]</string>
+                      <string>Dohodki (letno)</string>
                      </property>
                      <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_11">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <italic>true</italic>
-                      </font>
+                    <widget class="Line" name="line_2">
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="layoutDirection">
-                      <enum>Qt::LeftToRight</enum>
+                     <property name="lineWidth">
+                      <number>2</number>
                      </property>
-                     <property name="text">
-                      <string>Normiran dohodek [%]</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_16">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <italic>true</italic>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>Stroški obnove [%]</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_18">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                       <italic>true</italic>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>NUSZ [€/leto]</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                     </property>
-                    </widget>
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_5">
+                       <item>
+                        <widget class="QLabel" name="label_21">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>2</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::RightToLeft</enum>
+                         </property>
+                         <property name="text">
+                          <string>Bruto dohodek [€]</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_22">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>2</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::RightToLeft</enum>
+                         </property>
+                         <property name="text">
+                          <string>Davčna osnova [€]</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_23">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>2</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::RightToLeft</enum>
+                         </property>
+                         <property name="text">
+                          <string>Davek [€]</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_24">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>2</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::RightToLeft</enum>
+                         </property>
+                         <property name="text">
+                          <string>Neto dohodek [€]</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_6">
+                       <item>
+                        <widget class="QLabel" name="bruto_dohodek">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="davcna_osnova">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="davek_doh">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="neto_dohodek">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_2">
+                  <layout class="QVBoxLayout" name="verticalLayout_17">
+                   <property name="leftMargin">
+                    <number>20</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>20</number>
+                   </property>
                    <item>
-                    <widget class="QLineEdit" name="davek_per">
+                    <widget class="QLabel" name="label_25">
                      <property name="font">
                       <font>
-                       <pointsize>12</pointsize>
+                       <pointsize>14</pointsize>
+                       <italic>true</italic>
+                       <bold>true</bold>
                       </font>
                      </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
                      <property name="text">
-                      <string>25.0</string>
+                      <string>Denarni tok &amp; Donosnost</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="readOnly">
-                      <bool>false</bool>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Vnesite stopnjo davka...</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="normiran_doh_per">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
+                    <widget class="Line" name="line_5">
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="inputMask">
-                      <string/>
+                     <property name="lineWidth">
+                      <number>2</number>
                      </property>
-                     <property name="text">
-                      <string>10.0</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="readOnly">
-                      <bool>false</bool>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Vnesite normiran doh...</string>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="obnova_per">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string>7</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Vnesite ceno...</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="stavbno">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="inputMask">
-                      <string/>
-                     </property>
-                     <property name="text">
-                      <string>50</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Vnesite ceno...</string>
-                     </property>
-                    </widget>
+                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_16">
+                       <item>
+                        <widget class="QLabel" name="denarni_tok">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="denarni_tok_mes">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="donosnost">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="letno_izplailo">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>n/a</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_14">
+                       <item>
+                        <widget class="QLabel" name="denarni_tok_2">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>€/letno</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="denarni_tok_3">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>€/mesečno</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="denarni_tok_4">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>%</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="denarni_tok_5">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>true</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="text">
+                          <string>št. let izplačitve</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </item>
                 </layout>
                </item>
               </layout>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_6">
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_12">
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_11">
-                 <property name="leftMargin">
-                  <number>20</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>20</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>20</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>20</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="label_13">
-                   <property name="font">
-                    <font>
-                     <pointsize>14</pointsize>
-                     <italic>true</italic>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Stroški nepremičnine</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="Line" name="line_3">
-                   <property name="frameShadow">
-                    <enum>QFrame::Plain</enum>
-                   </property>
-                   <property name="lineWidth">
-                    <number>2</number>
-                   </property>
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_3">
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_7">
-                     <item>
-                      <widget class="QLabel" name="label_14">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Storitve upravnika [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_17">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Obratovalni stroški [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_15">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Zavarovanje [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_29">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                         <horstretch>2</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Obnova [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_30">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                         <horstretch>2</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Skupni stroški [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_8">
-                     <item>
-                      <widget class="QLineEdit" name="storitve_upravnik">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                        </font>
-                       </property>
-                       <property name="inputMask">
-                        <string/>
-                       </property>
-                       <property name="text">
-                        <string>10</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>Vnesite znesek...</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="obratovalni_stroski">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                        </font>
-                       </property>
-                       <property name="accessibleDescription">
-                        <string>test</string>
-                       </property>
-                       <property name="inputMask">
-                        <string/>
-                       </property>
-                       <property name="text">
-                        <string>10</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string extracomment="Tekoči mesečni stroški, položnice elektro, voda,...">Vnesite znesek...</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="zavarovanje">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                        </font>
-                       </property>
-                       <property name="inputMask">
-                        <string/>
-                       </property>
-                       <property name="text">
-                        <string>10</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>Vnesite znesek...</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="obnova">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="skupni_stroski">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_9">
-                     <item>
-                      <widget class="QLabel" name="sklad_leto">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>120 €/leto</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="poloznice_leto">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>120 €/leto</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="zavarovanje_leto">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>120 €/leto</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="poloznice_leto_3">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>/leto</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="poloznice_leto_4">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>/leto</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_10">
-                 <property name="leftMargin">
-                  <number>20</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="label_20">
-                   <property name="font">
-                    <font>
-                     <pointsize>14</pointsize>
-                     <italic>true</italic>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Dohodki (letno)</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="Line" name="line_2">
-                   <property name="frameShadow">
-                    <enum>QFrame::Plain</enum>
-                   </property>
-                   <property name="lineWidth">
-                    <number>2</number>
-                   </property>
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_2">
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_5">
-                     <item>
-                      <widget class="QLabel" name="label_21">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                         <horstretch>2</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::RightToLeft</enum>
-                       </property>
-                       <property name="text">
-                        <string>Bruto dohodek [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_22">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                         <horstretch>2</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::RightToLeft</enum>
-                       </property>
-                       <property name="text">
-                        <string>Davčna osnova [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_23">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                         <horstretch>2</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::RightToLeft</enum>
-                       </property>
-                       <property name="text">
-                        <string>Davek [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_24">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                         <horstretch>2</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::RightToLeft</enum>
-                       </property>
-                       <property name="text">
-                        <string>Neto dohodek [€]</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_6">
-                     <item>
-                      <widget class="QLabel" name="bruto_dohodek">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::LeftToRight</enum>
-                       </property>
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="davcna_osnova">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::LeftToRight</enum>
-                       </property>
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="davek_doh">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::LeftToRight</enum>
-                       </property>
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="neto_dohodek">
-                       <property name="font">
-                        <font>
-                         <pointsize>12</pointsize>
-                         <italic>true</italic>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::LeftToRight</enum>
-                       </property>
-                       <property name="text">
-                        <string>n/a</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_2">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
              </item>
             </layout>
            </item>
@@ -1077,7 +1356,7 @@
       </layout>
      </item>
      <item>
-      <spacer name="verticalSpacer">
+      <spacer name="verticalSpacer_2">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>

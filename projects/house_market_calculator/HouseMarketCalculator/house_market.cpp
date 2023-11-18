@@ -17,7 +17,9 @@ Widget::Widget(QWidget *parent)
 
     // Connect to income calculation
     connect( ui->cena,              &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->cena,              &QLineEdit::textChanged, this, &Widget::CalculatePricePerSize );
     connect( ui->velikost,          &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->velikost,          &QLineEdit::textChanged, this, &Widget::CalculatePricePerSize );
     connect( ui->renta,             &QLineEdit::textChanged, this, &Widget::CalculateIncome );
     connect( ui->nenajemnost,       &QLineEdit::textChanged, this, &Widget::CalculateIncome );
     connect( ui->davek_per,         &QLineEdit::textChanged, this, &Widget::CalculateIncome );
@@ -39,6 +41,8 @@ Widget::Widget(QWidget *parent)
     // Calculate income, expenses
     CalculateIncome( nullptr );
     CalculateExpense( nullptr );
+    CalculatePricePerSize( nullptr );
+    CalculateDonos( nullptr );
 }
 
 Widget::~Widget()
@@ -127,6 +131,9 @@ void Widget::CalculateIncome(const QString &new_value)
     ui->davcna_osnova->setText( QString::number( tax_basis ));
     ui->davek_doh->setText( QString::number( tax ));
     ui->neto_dohodek->setText( QString::number( net_earnigns ));
+
+    // Calculate donos
+    CalculateDonos( nullptr );
 }
 
 
@@ -153,6 +160,41 @@ void Widget::CalculateExpense(const QString &new_value)
     // Update GUI
     ui->obnova->setText( QString::number( renovation_expense ));
     ui->skupni_stroski->setText( QString::number( total_expense ));
+
+    // Calculate donos
+    CalculateDonos( nullptr );
+}
+
+void Widget::CalculatePricePerSize(const QString &new_value)
+{
+    // Get price and size
+    const float price = ( ui->cena->text().toFloat() );
+    const float size = ( ui->velikost->text().toFloat());
+
+    // Calculate price per size
+    const float price_per_size = ( price / size );
+
+    // Update GUI
+    ui->cena_na_velikost->setText( QString::number( price_per_size ));
+}
+
+void Widget::CalculateDonos(const QString &new_value)
+{
+    // Get new earnings and total expenses
+    const float net_earnings = ui->neto_dohodek->text().toFloat();
+    const float total_expense = ui->skupni_stroski->text().toFloat();
+
+    // Calculate cash flow
+    const float cash_flow = ( net_earnings - total_expense );
+
+    // Calculate donos in percentage
+    const float donosnost = ( cash_flow / ui->cena->text().toFloat() * 100.0f );
+
+    // Update GUI
+    ui->denarni_tok->setText( QString::number( cash_flow ));
+    ui->denarni_tok_mes->setText( QString::number( cash_flow / 12 ));
+    ui->donosnost->setText( QString::number( donosnost ));
+    ui->letno_izplailo->setText( QString::number( 1/donosnost * 100.0f ));
 }
 
 

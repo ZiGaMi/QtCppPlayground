@@ -23,5 +23,7 @@ private:
     void AnnualExpenseUpdate    (const QString& new_value);
     void CalculateIncome        (const QString& new_value);
     void CalculateExpense       (const QString& new_value);
+    void CalculatePricePerSize  (const QString& new_value);
+    void CalculateDonos         (const QString& new_value);
 };
 #endif // WIDGET_H
