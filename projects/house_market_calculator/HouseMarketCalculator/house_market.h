@@ -18,7 +18,6 @@ public:
 private:
     Ui::Widget *ui;
 
-
     void InputFormatter(const QString& new_text);
 
     void AnnualExpenseUpdate    (const QString& new_value);

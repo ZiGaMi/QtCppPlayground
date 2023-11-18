@@ -16,10 +16,12 @@ Widget::Widget(QWidget *parent)
     connect( ui->renta,     &QLineEdit::textChanged, this, &Widget::InputFormatter );
 
     // Connect to income calculation
-    connect( ui->cena,          &QLineEdit::textChanged, this, &Widget::CalculateIncome );
-    connect( ui->velikost,      &QLineEdit::textChanged, this, &Widget::CalculateIncome );
-    connect( ui->renta,         &QLineEdit::textChanged, this, &Widget::CalculateIncome );
-    connect( ui->nenajemnost,   &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->cena,              &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->velikost,          &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->renta,             &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->nenajemnost,       &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->davek_per,         &QLineEdit::textChanged, this, &Widget::CalculateIncome );
+    connect( ui->normiran_doh_per,  &QLineEdit::textChanged, this, &Widget::CalculateIncome );
 
     // Connection to annual expenses update
     connect( ui->storitve_upravnik,     &QLineEdit::textChanged, this, &Widget::AnnualExpenseUpdate );
@@ -30,6 +32,9 @@ Widget::Widget(QWidget *parent)
     connect( ui->storitve_upravnik,     &QLineEdit::textChanged, this, &Widget::CalculateExpense );
     connect( ui->zavarovanje,           &QLineEdit::textChanged, this, &Widget::CalculateExpense );
     connect( ui->obratovalni_stroski,   &QLineEdit::textChanged, this, &Widget::CalculateExpense );
+    connect( ui->obnova_per,            &QLineEdit::textChanged, this, &Widget::CalculateExpense );
+    connect( ui->renta,                 &QLineEdit::textChanged, this, &Widget::CalculateExpense );
+    connect( ui->nenajemnost,           &QLineEdit::textChanged, this, &Widget::CalculateExpense );
 
     // Calculate income, expenses
     CalculateIncome( nullptr );
@@ -89,8 +94,6 @@ void Widget::AnnualExpenseUpdate(const QString &new_value)
     }
 }
 
-
-
 ////////////////////////////////////////////////////////////////////////////////
 /*!
 * @brief    	Calculate income
@@ -120,17 +123,36 @@ void Widget::CalculateIncome(const QString &new_value)
     const float net_earnigns = ( gross_earnings - tax );
 
     // Update GUI
-    ui->bruto_dohodek->setText( QString::number( gross_earnings ) + " €" );
-    ui->davcna_osnova->setText( QString::number( tax_basis ) + " €" );
-    ui->davek_doh->setText( QString::number( tax ) + " €" );
-    ui->neto_dohodek->setText( QString::number( net_earnigns ) + " €" );
+    ui->bruto_dohodek->setText( QString::number( gross_earnings ));
+    ui->davcna_osnova->setText( QString::number( tax_basis ));
+    ui->davek_doh->setText( QString::number( tax ));
+    ui->neto_dohodek->setText( QString::number( net_earnigns ));
 }
 
 
 
 void Widget::CalculateExpense(const QString &new_value)
 {
+    // Get new earnings
+    const float net_earnings = ui->neto_dohodek->text().toFloat();
 
+    // Get renovation percentage
+    const float renovation_per = ui->obnova_per->text().toFloat();
+
+    // Calculate renovation expenses
+    const float renovation_expense = ( net_earnings * ( renovation_per / 100.0f ));
+
+    // Get expenses
+    const float upravnik_annual     = ( ui->storitve_upravnik->text().toFloat() * 12 );
+    const float obratovanje_annual  = ( ui->obratovalni_stroski->text().toFloat() * 12 );
+    const float zavarovanje_annual  = ( ui->zavarovanje->text().toFloat() * 12 );
+
+    // Calculate total expenses
+    const float total_expense = renovation_expense + upravnik_annual + obratovanje_annual + zavarovanje_annual;
+
+    // Update GUI
+    ui->obnova->setText( QString::number( renovation_expense ));
+    ui->skupni_stroski->setText( QString::number( total_expense ));
 }
 
 
