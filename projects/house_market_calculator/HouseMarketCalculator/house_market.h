@@ -21,8 +21,8 @@ private:
 
     void InputFormatter(const QString& new_text);
 
-    void AnnualExpenseUpdate(const QString& new_value);
-
-    void Recalculate(const QString& new_value);
+    void AnnualExpenseUpdate    (const QString& new_value);
+    void CalculateIncome        (const QString& new_value);
+    void CalculateExpense       (const QString& new_value);
 };
 #endif // WIDGET_H
