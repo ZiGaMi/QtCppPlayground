@@ -2,6 +2,8 @@
 #include "./ui_house_market.h"
 
 #include <QDebug>
+#include <QDoubleValidator>
+
 
 
 Widget::Widget(QWidget *parent)
@@ -9,6 +11,17 @@ Widget::Widget(QWidget *parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+
+    // Setup floating point entry for linedit
+    ui->cena->setValidator( new QDoubleValidator( 0.0, 10.0, 1, ui->cena ));
+    ui->velikost->setValidator( new QDoubleValidator( 0.0, 1000.0, 2, ui->velikost ));
+    ui->renta->setValidator( new QDoubleValidator( 0.0, 1000.0, 2, ui->renta ));
+    ui->nenajemnost->setValidator( new QDoubleValidator( 0, 12, 0, ui->nenajemnost ));
+
+    ui->storitve_upravnik->setValidator(    new QDoubleValidator( 0.0, 1000.0, 2, ui->storitve_upravnik ));
+    ui->obratovalni_stroski->setValidator(  new QDoubleValidator( 0.0, 1000.0, 2, ui->obratovalni_stroski ));
+    ui->zavarovanje->setValidator(          new QDoubleValidator( 0.0, 1000.0, 2, ui->zavarovanje ));
+
 
     // Connection to formatter
     connect( ui->cena,      &QLineEdit::textChanged, this, &Widget::InputFormatter );
@@ -30,6 +43,11 @@ Widget::Widget(QWidget *parent)
     connect( ui->zavarovanje,           &QLineEdit::textChanged, this, &Widget::AnnualExpenseUpdate );
     connect( ui->obratovalni_stroski,   &QLineEdit::textChanged, this, &Widget::AnnualExpenseUpdate );
 
+    // Trigger annual expenses calculations
+    emit ui->storitve_upravnik->textChanged( ui->storitve_upravnik->text() );
+    emit ui->zavarovanje->textChanged( ui->zavarovanje->text() );
+    emit ui->obratovalni_stroski->textChanged( ui->obratovalni_stroski->text() );
+
     // Connect to expense calculations
     connect( ui->storitve_upravnik,     &QLineEdit::textChanged, this, &Widget::CalculateExpense );
     connect( ui->zavarovanje,           &QLineEdit::textChanged, this, &Widget::CalculateExpense );
@@ -43,6 +61,8 @@ Widget::Widget(QWidget *parent)
     CalculateExpense( nullptr );
     CalculatePricePerSize( nullptr );
     CalculateDonos( nullptr );
+
+
 }
 
 Widget::~Widget()
@@ -92,7 +112,7 @@ void Widget::AnnualExpenseUpdate(const QString &new_value)
         if ( key == p_LineEdit )
         {
             // Change annual value
-            value->setText( QString::number( new_value.toInt() * 12 ) + " €/leto" );
+            value->setText( QString::number( new_value.toFloat() * 12 ) + " €/leto" );
             break;
         }
     }
