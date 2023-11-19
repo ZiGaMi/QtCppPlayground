@@ -16,12 +16,16 @@ Widget::Widget(QWidget *parent)
     ui->cena->setValidator( new QDoubleValidator( 0.0, 10.0, 1, ui->cena ));
     ui->velikost->setValidator( new QDoubleValidator( 0.0, 1000.0, 2, ui->velikost ));
     ui->renta->setValidator( new QDoubleValidator( 0.0, 1000.0, 2, ui->renta ));
-    ui->nenajemnost->setValidator( new QDoubleValidator( 0, 12, 0, ui->nenajemnost ));
+    ui->nenajemnost->setValidator( new QDoubleValidator( 0.0, 12, 0, ui->nenajemnost ));
 
     ui->storitve_upravnik->setValidator(    new QDoubleValidator( 0.0, 1000.0, 2, ui->storitve_upravnik ));
     ui->obratovalni_stroski->setValidator(  new QDoubleValidator( 0.0, 1000.0, 2, ui->obratovalni_stroski ));
     ui->zavarovanje->setValidator(          new QDoubleValidator( 0.0, 1000.0, 2, ui->zavarovanje ));
 
+    ui->davek_per->setValidator( new QIntValidator( 0, 100, ui->davek_per ));
+    ui->normiran_doh_per->setValidator( new QIntValidator( 0, 100, ui->normiran_doh_per ));
+    ui->obnova_per->setValidator( new QIntValidator( 0, 100, ui->obnova_per ));
+    ui->stavbno->setValidator( new QDoubleValidator( 0.0, 1000.0, 2, ui->stavbno ));
 
     // Connection to formatter
     connect( ui->cena,      &QLineEdit::textChanged, this, &Widget::InputFormatter );
