@@ -1175,9 +1175,15 @@
               <widget class="QLabel" name="label_21">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>3</horstretch>
+                 <horstretch>40</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000000</width>
+                 <height>16777215</height>
+                </size>
                </property>
                <property name="font">
                 <font>
@@ -1200,7 +1206,7 @@
               <widget class="QLabel" name="bruto_dohodek">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>1</horstretch>
+                 <horstretch>2</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
@@ -1229,9 +1235,15 @@
               <widget class="QLabel" name="label_22">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>3</horstretch>
+                 <horstretch>40</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000000</width>
+                 <height>16777215</height>
+                </size>
                </property>
                <property name="font">
                 <font>
@@ -1254,7 +1266,7 @@
               <widget class="QLabel" name="davcna_osnova">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>1</horstretch>
+                 <horstretch>2</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
@@ -1283,9 +1295,15 @@
               <widget class="QLabel" name="label_23">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>3</horstretch>
+                 <horstretch>40</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000000</width>
+                 <height>16777215</height>
+                </size>
                </property>
                <property name="font">
                 <font>
@@ -1308,7 +1326,7 @@
               <widget class="QLabel" name="davek_doh">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>1</horstretch>
+                 <horstretch>2</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
@@ -1337,9 +1355,15 @@
               <widget class="QLabel" name="label_24">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>3</horstretch>
+                 <horstretch>40</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000000</width>
+                 <height>16777215</height>
+                </size>
                </property>
                <property name="font">
                 <font>
@@ -1363,7 +1387,7 @@
               <widget class="QLabel" name="neto_dohodek">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>1</horstretch>
+                 <horstretch>2</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
