@@ -9,7 +9,6 @@ int main()
 {
     std::cout << "Hello World!" << std::endl;
 
-
     {
         const ring_buffer_attr_t attr =
         {
