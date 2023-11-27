@@ -34,15 +34,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-/**
- *  Ring Buffer attributes
- */
-typedef struct
-{
-    const char * name;      /**<Name of ring buffer for debugging purposes. Default: NULL */
-    void *       p_mem;     /**<Used buffer memory for static allocation, NULL for dynamic allocation. Default: NULL */
-    bool         override;  /**<Override buffer content when full. Default: false */
-} ring_buffer_attr_t;
+
 
 /**
  *  Ring Buffer Class
@@ -50,14 +42,12 @@ typedef struct
 template <typename T>
 class RingBuffer
 {
-    ////////////////////////////////////////////////////////////////////////////////
-    //  Public Methods
-    ////////////////////////////////////////////////////////////////////////////////
     public:
-        RingBuffer(const uint32_t size, const ring_buffer_attr_t * const attr);
-        ~RingBuffer();
 
-        enum Status
+        /**
+         *  Status
+         */
+        typedef enum
         {
             Ok              = 0x00U,    /**<Normal operation */
 
@@ -69,10 +59,34 @@ class RingBuffer
             /**<Warnings */
             WarningFull     = 0x10U,    /**<Buffer full warning */
             WarningEmpty    = 0x20U,    /**<Buffer empty warning */
-        };
 
-        Status add(const T item);
-        Status get(const T* p_item);
+        } status_t;
+
+        /**
+         *  Ring Buffer attributes
+         */
+        typedef struct
+        {
+            const char * name;      /**<Name of ring buffer for debugging purposes. Default: NULL */
+            void *       p_mem;     /**<Used buffer memory for static allocation, NULL for dynamic allocation. Default: NULL */
+            bool         override;  /**<Override buffer content when full. Default: false */
+        } attr_t;
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //  Public Methods
+    ////////////////////////////////////////////////////////////////////////////////
+    public:
+        RingBuffer(const uint32_t size, const attr_t & attr);
+        ~RingBuffer();
+
+
+
+        status_t  add(const T item);
+        status_t  get(T & item);
+
+        //Status  at(const uint32_t idx, const T & item);
 
 
 

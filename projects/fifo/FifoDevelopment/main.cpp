@@ -7,6 +7,37 @@
 
 int main()
 {
+    const RingBuffer<int>::attr_t attr =
+        {
+            .name       = "Floating FIFO",
+            .p_mem      = nullptr,
+            .override   = true,
+        };
+
+
+
+    RingBuffer<int> myBuf = RingBuffer<int>( 10, attr );
+
+
+
+    RingBuffer<int>::status_t buf_status = RingBuffer<int>::Ok;
+    int val;
+
+    myBuf.add( 100 );
+    myBuf.get( val );
+
+    std::cout << "val: " << val << std::endl;
+
+
+
+
+
+
+
+
+#if 0
+
+
     std::cout << "Hello World!" << std::endl;
 
     {
@@ -27,6 +58,8 @@ int main()
 
         U8BufferStatus status = U8BufferStatus::Ok;
 
+        RingBuffer<uint8_t>::Status buf_status = RingBuffer<uint8_t>::Error;
+
         if ( U8BufferStatus::Ok == fifo.add( 0 ))
         {
             std::cout << "Added to fifo OK..." << std::endl;
@@ -46,16 +79,16 @@ int main()
         }
 
 
-        std::cout << "Get: " << data << std::endl;
+        std::cout << "Get: " << static_cast<int>(data) << std::endl;
 
         fifo.get( &data );
-        std::cout << "Get: " << data << std::endl;
+        std::cout << "Get: " << static_cast<int>(data) << std::endl;
 
         fifo.get( &data );
-        std::cout << "Get: " << data << std::endl;
+        std::cout << "Get: " << static_cast<int>(data) << std::endl;
 
         fifo.get( &data );
-        std::cout << "Get: " << data << std::endl;
+        std::cout << "Get: " << static_cast<int>(data) << std::endl;
 
 
     }
@@ -72,6 +105,9 @@ int main()
     {
         std::cout << "Error: " << e.what() << std::endl;
     }
+
+#endif
+
 
     return 0;
 }

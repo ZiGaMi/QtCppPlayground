@@ -75,40 +75,31 @@
 */
 ////////////////////////////////////////////////////////////////////////////////
 template<typename T>
-RingBuffer<T>::RingBuffer(const uint32_t size, const ring_buffer_attr_t * const attr) : size(size)
+RingBuffer<T>::RingBuffer(const uint32_t size, const attr_t & attr) : size(size)
 {
-    std::cout << "RingBuffer created..." << std::endl;
-
-    if ( nullptr != attr )
+    // Dynamically allocate memory
+    if ( nullptr == attr.p_mem )
     {
-        // Dynamically allocate memory
-        if ( nullptr == attr->p_mem )
+        // Allocate buffer space
+        p_data = new T ( size );
+
+        // Allocation success
+        if ( nullptr != p_data )
         {
-            // Allocate buffer space
-            p_data = new T ( size );
-
-            // Allocation success
-            if ( nullptr != p_data )
-            {
-                std::cout << "Allocation success!" << std::endl;
-            }
-
-            // Allocation failed
-            else
-            {
-                std::cout << "Allocation fail!" << std::endl;
-            }
+            std::cout << "Allocation success!" << std::endl;
         }
 
-        // Statically allocated memory
+        // Allocation failed
         else
         {
-            p_data = (T*) attr->p_mem;
+            std::cout << "Allocation fail!" << std::endl;
         }
     }
+
+    // Statically allocated memory
     else
     {
-        throw std::invalid_argument("Missing attr parameter");
+        p_data = (T*) attr.p_mem;
     }
 }
 
@@ -130,9 +121,9 @@ RingBuffer<T>::~RingBuffer()
 }
 
 template<typename T>
-typename RingBuffer<T>::Status RingBuffer<T>::add(const T item)
+typename RingBuffer<T>::status_t RingBuffer<T>::add(const T item)
 {
-    RingBuffer<T>::Status status = Ok;
+    RingBuffer<T>::status_t status = Ok;
 
     std::cout << "Adding..." << std::endl;
 
@@ -140,11 +131,14 @@ typename RingBuffer<T>::Status RingBuffer<T>::add(const T item)
 }
 
 template<typename T>
-typename RingBuffer<T>::Status RingBuffer<T>::get(const T *p_item)
+typename RingBuffer<T>::status_t RingBuffer<T>::get(T & item)
 {
-    RingBuffer<T>::Status status = RingBuffer::Ok;
+    RingBuffer<T>::status_t status = RingBuffer::Ok;
 
     std::cout << "Getting..." << std::endl;
+
+
+    item = 2;
 
     return status;
 }
