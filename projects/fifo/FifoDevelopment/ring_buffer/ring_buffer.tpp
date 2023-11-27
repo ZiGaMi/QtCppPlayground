@@ -24,6 +24,8 @@
 // TODO: Only debugging
 //#include <iostream>
 
+#include <algorithm>    // For std::copy
+
 ////////////////////////////////////////////////////////////////////////////////
 // Definitions
 ////////////////////////////////////////////////////////////////////////////////
@@ -121,27 +123,84 @@ RingBuffer<T>::~RingBuffer()
 }
 
 template<typename T>
-typename RingBuffer<T>::status_t RingBuffer<T>::add(const T item)
+typename RingBuffer<T>::status_t RingBuffer<T>::add(const T* const p_item)
 {
     RingBuffer<T>::status_t status = Ok;
 
-    std::cout << "Adding..." << std::endl;
+    // Buffer full
+    if  (    ( head == tail )
+        &&   ( true == is_full ))
+    {
+        // Override enabled - buffer never full
+        if ( true == override )
+        {
+            // Add single item to buffer
+            addSingleToBuffer( p_item );
+
+            // Push tail forward
+            // TODO:
+            //tail = ring_buffer_increment_index( tail, size, 1U );
+        }
+
+        // Buffer full
+        else
+        {
+            status = RingBuffer::WarningFull;
+        }
+    }
+
+    // Buffer not full
+    else
+    {
+        // Add single item to buffer
+        addSingleToBuffer( p_item );
+
+        // Buffer no longer empty
+        is_empty = false;
+
+        // Is buffer full
+        if ( head == tail )
+        {
+            is_full = true;
+        }
+        else
+        {
+            is_full = false;
+        }
+    }
 
     return status;
 }
 
 template<typename T>
-typename RingBuffer<T>::status_t RingBuffer<T>::get(T & item)
+typename RingBuffer<T>::status_t RingBuffer<T>::get(T* const p_item) const
 {
     RingBuffer<T>::status_t status = RingBuffer::Ok;
 
     std::cout << "Getting..." << std::endl;
 
 
-    item = 2;
+    *p_item = 2;
 
     return status;
 }
+
+#include <cstring>
+
+
+
+
+template<typename T>
+void RingBuffer<T>::addSingleToBuffer(const T * const p_item)
+{
+    // Add item to buffer
+    std::memcpy((T*) &p_data[(head * sizeof(T))], (T*) p_item, sizeof(T) );
+
+    // TODO:
+    // Increment head
+    //head = ring_buffer_increment_index( head, size_of_buffer, 1U );
+}
+
 
 
 

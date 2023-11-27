@@ -21,12 +21,16 @@ int main()
 
 
     RingBuffer<int>::status_t buf_status = RingBuffer<int>::Ok;
-    int val;
+    int val = 2;
 
-    myBuf.add( 100 );
-    myBuf.get( val );
+    myBuf.add( &val );
+
+    int output = 0;
+
+    myBuf.get( &output );
 
     std::cout << "val: " << val << std::endl;
+    std::cout << "output: " << output << std::endl;
 
 
 

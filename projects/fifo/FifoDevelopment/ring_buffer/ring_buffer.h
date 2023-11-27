@@ -83,10 +83,14 @@ class RingBuffer
 
 
 
-        status_t  add(const T item);
-        status_t  get(T & item);
+        status_t    add (const T * const p_item);
+        status_t    get (T* const item) const;
 
-        //Status  at(const uint32_t idx, const T & item);
+        //status_t    get_by_index    (T& item);
+        //status_t    reset           (void);
+        //status_t      at      (const uint32_t idx, T& item);
+
+        //Status  at(const uint32_t idx, const T& item);
 
 
 
@@ -99,6 +103,9 @@ class RingBuffer
         //  Private Methods
         ////////////////////////////////////////////////////////////////////////////////
 
+        void addSingleToBuffer(const T* const p_item);
+
+
         ////////////////////////////////////////////////////////////////////////////////
         //  Private Variables
         ////////////////////////////////////////////////////////////////////////////////
@@ -106,7 +113,7 @@ class RingBuffer
         /**<Pointer to data memory */
         T * p_data;
 
-        /**<Size of buffer */
+        /**<Size of buffer in items */
         uint32_t size;
 
         /**<Head and tail pointer */
