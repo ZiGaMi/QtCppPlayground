@@ -67,9 +67,9 @@ class RingBuffer
          */
         typedef struct
         {
-            const char * name;      /**<Name of ring buffer for debugging purposes. Default: NULL */
-            void *       p_mem;     /**<Used buffer memory for static allocation, NULL for dynamic allocation. Default: NULL */
-            bool         override;  /**<Override buffer content when full. Default: false */
+            std::string name;      /**<Name of ring buffer for debugging purposes. Default: NULL */
+            void *      p_mem;     /**<Used buffer memory for static allocation, NULL for dynamic allocation. Default: NULL */
+            bool        override;  /**<Override buffer content when full. Default: false */
         } attr_t;
 
 
@@ -85,6 +85,9 @@ class RingBuffer
 
         status_t    add (const T * const p_item);
         status_t    get (T* const item) const;
+
+
+        void showContent(void);
 
         //status_t    get_by_index    (T& item);
         //status_t    reset           (void);
@@ -103,7 +106,8 @@ class RingBuffer
         //  Private Methods
         ////////////////////////////////////////////////////////////////////////////////
 
-        void addSingleToBuffer(const T* const p_item);
+        void        addSingleToBuffer   (const T* const p_item);
+        uint32_t    incrementIndex      (const uint32_t idx) const;
 
 
         ////////////////////////////////////////////////////////////////////////////////
@@ -112,6 +116,9 @@ class RingBuffer
 
         /**<Pointer to data memory */
         T * p_data;
+
+        /**<Ring buffer name */
+        std::string name;
 
         /**<Size of buffer in items */
         uint32_t size;

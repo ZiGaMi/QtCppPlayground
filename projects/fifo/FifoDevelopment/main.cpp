@@ -7,30 +7,59 @@
 
 int main()
 {
-    const RingBuffer<int>::attr_t attr =
+
+    static int mem[10] = {0};
+
+    const RingBuffer<uint8_t>::attr_t attr =
         {
-            .name       = "Floating FIFO",
-            .p_mem      = nullptr,
-            .override   = true,
+            .name       = "My FIFO",
+            .p_mem      = &mem,
+            .override   = false,
         };
 
 
 
-    RingBuffer<int> myBuf = RingBuffer<int>( 10, attr );
+    RingBuffer<uint8_t> myBuf = RingBuffer<uint8_t>( 5, attr );
 
 
 
-    RingBuffer<int>::status_t buf_status = RingBuffer<int>::Ok;
-    int val = 2;
+    RingBuffer<uint8_t>::status_t buf_status = RingBuffer<uint8_t>::Ok;
 
+    uint8_t val = 0;
+
+
+    val++;
     myBuf.add( &val );
+    std::cout << "myBuf.add status: " << buf_status << std::endl;
+    myBuf.showContent();
 
-    int output = 0;
+    val++;
+    myBuf.add( &val );
+    std::cout << "myBuf.add status: " << buf_status << std::endl;
+    myBuf.showContent();
 
-    myBuf.get( &output );
+    val++;
+    myBuf.add( &val );
+    std::cout << "myBuf.add status: " << buf_status << std::endl;
+    myBuf.showContent();
 
-    std::cout << "val: " << val << std::endl;
-    std::cout << "output: " << output << std::endl;
+    val++;
+    myBuf.add( &val );
+    std::cout << "myBuf.add status: " << buf_status << std::endl;
+    myBuf.showContent();
+
+    val++;
+    myBuf.add( &val );
+    std::cout << "myBuf.add status: " << buf_status << std::endl;
+    myBuf.showContent();
+
+    val++;
+    myBuf.add( &val );
+    std::cout << "myBuf.add status: " << buf_status << std::endl;
+    myBuf.showContent();
+
+    //std::cout << "val: " << val << std::endl;
+    //std::cout << "output: " << output << std::endl;
 
 
 
